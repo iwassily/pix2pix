@@ -12,7 +12,6 @@ trainer = pix2pix_trainer(tr_loader=train_loader, val_loader=validation_loader, 
 trainer.load_checkpoint()
 trainer.show_examples(num_examples=4, mode='val')
 ```
-Для корректной работы make_dataloaders (используется torchvision.datasets.ImageFolder) изображения должны лежать 
 
 Я запускал свою модель на двух датасетах. Первый это Cityscapes dataset, рассмотренный в оригинальной статье, решается задача восстановления фотографии по её семантической сегментации.
 Второй это [Sketch2Pokemon](https://www.kaggle.com/norod78/sketch2pokemon), решается задача раскраски чёрно-белых скетчей.
@@ -26,7 +25,7 @@ trainer.show_examples(num_examples=4, mode='val')
 # Sketch2Pokemon
 ![Резкльтаты](https://github.com/iwassily/pix2pix/blob/main/examples/pokemons.png)
 
-Модель обучалась 100 эпох, размер батча , 808 изображений в обучении, 3 на Tesla P100. 
+Модель обучалась 100 эпох, размер батча 4, 808 изображений в обучении, 3.5 часа на Tesla P100. 
 Датасет был составлен не совсем корректно - в трейне присутствовали изображения из теста. Поскольку модель на таком простом датасете теоретически может запоминать тренировочные изображения, я удалил из них тесовые, чтобы можно было адекватно оценивать качество генерации.
 * архив с датасетом
 * архив с весами обученной модели
