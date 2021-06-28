@@ -16,7 +16,11 @@ trainer.show_examples(num_examples=4, mode='val')
 Я запускал свою модель на двух датасетах. Первый это Cityscapes dataset, рассмотренный в оригинальной статье, решается задача восстановления фотографии по её семантической сегментации.
 Второй это [Sketch2Pokemon](https://www.kaggle.com/norod78/sketch2pokemon), решается задача раскраски чёрно-белых скетчей.
 # Cityscapes
-![результаты](https://github.com/iwassily/pix2pix/blob/main/examples/cityscapes.png)
+![результаты](https://github.com/iwassily/pix2pix/blob/main/examples/cityscapes_train.png)
+результаты генерации для трейна
+
+![результаты](https://github.com/iwassily/pix2pix/blob/main/examples/cityscapes_val.png)
+результаты генерации для трейна
 
 Модель обучалась 200 эпох, размер батча 8, 2975 изображений в обучении, 5.5 часов на Tesla P100. 
 * архив с датасетом
